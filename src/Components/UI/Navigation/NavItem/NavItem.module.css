@@ -1,0 +1,16 @@
+.nav_item {
+    width: 150px;
+    margin: 30px auto;
+    /* border:2px black solid; */
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.nav_item:hover{
+    background-color: var(--primary-color-light);
+}
