@@ -1,16 +1,18 @@
 .nav_item {
-    width: 150px;
-    margin: 30px auto;
+    width: 92px;
+    margin: auto 6px ;
     /* border:2px black solid; */
     cursor: pointer;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 6px;
     transition: 0.3s;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    color: var(--primary-color-light)
     
 }
 
 .nav_item:hover{
-    background-color: var(--primary-color-light);
+    color: var(--accent-color);
 }

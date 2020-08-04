@@ -1,8 +1,13 @@
 body {
   margin: 0;
+  padding:0;
+  width: 100%;
+  height: 100%;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-color);
+
 }
 
 code {
@@ -11,12 +16,13 @@ code {
 }
 
 :root {
-  --primary-color: #2080a5;
-  --primary-color-light:  #5dafd7;
-  --primary-color-dark:  #005476;
-  --accent-color: #c04482;
-  --accent-color-light:#f676b1;
-  --accent-colort-dark:#8c0355;
-  color: #ffffff;
+  --primary-color: rgb(69,90,100);
+  --primary-color-light:  rgb(113,135,146);
+  --primary-color-dark:  rgb(28,49,58);
+  --accent-color: rgb(118,255,3);
+  --accent-color-light:rgb(176,255,87);
+  --accent-color-dark:rgb(50,203,0);
+  --text-on-primary:#fafafa;
+  color: #fafafa;
 }
 

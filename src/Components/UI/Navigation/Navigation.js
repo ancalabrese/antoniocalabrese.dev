@@ -7,9 +7,10 @@ class Navigation extends Component {
     render() {
         return (
             <nav className={Style.navigation}>
-                <NavItem link="#">About me</NavItem>
+                <NavItem link="#">Contacts</NavItem>
                 <NavItem link="#">Projects</NavItem>
-                <NavItem link="#">Contact me</NavItem>
+                <NavItem link="#">About me</NavItem>
+                <NavItem link="#">Home</NavItem>
             </nav>
         )
     }
