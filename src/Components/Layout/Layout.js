@@ -13,15 +13,16 @@ class Layout extends Component {
             <div className={Style.layout}>
                 <Toolbar className={Style.layoutElement} />
                 {/* <div className={Style['main-content']}> */}
-                    <main>
-                        <Home/>
-                        <AboutMe />
-                        <ComingSoon />
-                    </main>
-                    <footer>
-                        {/* <Contact /> */}
-                    </footer>
-                {/* </div> */}
+                <Home />
+                <main>
+                    <AboutMe />
+                    <ComingSoon />
+                    <Contact />
+                </main>
+
+
+
+
             </div>
         )
     }

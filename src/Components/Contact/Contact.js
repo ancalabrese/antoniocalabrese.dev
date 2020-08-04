@@ -1,14 +1,14 @@
 import React from 'react'
-import Aux from '../Aux/Aux'
 import SocialMediaButton from '../UI/SocialMediaButton/SocialMediaButton'
+import Style from './Contact.module.css'
 
 
 const SocialMedia = () => {
     return (
-        <Aux>
+        <div className={Style.contacts}>
             <SocialMediaButton />
             <SocialMediaButton />
-        </Aux>
+        </div>
     )
 }
 
