@@ -1,4 +1,6 @@
 .contacts{
-    flex: 1 1 auto;
+    flex: 1 1 20em;
+    align-self: stretch;
+    bottom: 0;
     background-color: var(--primary-color-light);
 }

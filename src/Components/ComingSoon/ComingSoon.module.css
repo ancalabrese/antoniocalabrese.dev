@@ -1,13 +1,14 @@
 
 .coming-soon {
-  flex: 1 1 auto;
+  flex: 1 1 20em;
   align-self: stretch;
-    font-size: 2.1em;
-    color: var(--accent-color-light);
-    animation: color-change 10s infinite alternate;
-    text-align: center;
-    background-color: var(--primary-color-dark);
-  }
+  bottom: 0;
+  font-size: 2em;
+  color: var(--accent-color-light);
+  animation: color-change 10s infinite alternate;
+  text-align: center;
+  background-color: var(--primary-color-dark);
+}
   
   @keyframes color-change {
     0% { color: var(--accent-color-light); }    

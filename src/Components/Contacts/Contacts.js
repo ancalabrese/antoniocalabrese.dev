@@ -1,6 +1,6 @@
 import React from 'react'
 import SocialMediaButton from '../UI/SocialMediaButton/SocialMediaButton'
-import Style from './Contact.module.css'
+import Style from './Contacts.module.css'
 
 
 const SocialMedia = () => {

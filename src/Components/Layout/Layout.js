@@ -3,7 +3,7 @@ import Toolbar from '../UI/Toolbar/Toolbar'
 import AboutMe from '../AboutMe/AboutMe'
 import Style from './Layout.module.css'
 import ComingSoon from '../ComingSoon/ComingSoon'
-import Contact from '../Contact/Contact'
+import Contacts from '../Contacts/Contacts'
 import Home from '../Home/Home'
 
 class Layout extends Component {
@@ -17,7 +17,7 @@ class Layout extends Component {
                 <main>
                     <AboutMe />
                     <ComingSoon />
-                    <Contact />
+                    <Contacts />
                 </main>
 
 
