@@ -1,8 +1,8 @@
 .about-me{
     color: black;
     /* text-transform: uppercase; */
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: 1.1em;
+    font-weight: 300;
     background-color: white;
     z-index: 50;
     flex: 1 1 auto;

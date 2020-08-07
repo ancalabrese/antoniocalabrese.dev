@@ -16,3 +16,11 @@
 .nav_item:hover{
     color: var(--accent-color);
 }
+
+.nav_item:active{
+    color: var(--accent-color);
+}
+
+.nav_item:disabled{
+    color: var(--primary-color-dark);
+}

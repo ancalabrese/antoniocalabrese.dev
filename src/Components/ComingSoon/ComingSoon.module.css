@@ -3,7 +3,7 @@
   flex: 1 1 20em;
   align-self: stretch;
   bottom: 0;
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--accent-color-light);
   animation: color-change 10s infinite alternate;
   text-align: center;

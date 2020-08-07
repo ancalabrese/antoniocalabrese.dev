@@ -19,10 +19,6 @@ class Layout extends Component {
                     <ComingSoon />
                     <Contacts />
                 </main>
-
-
-
-
             </div>
         )
     }
