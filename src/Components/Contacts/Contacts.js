@@ -18,7 +18,7 @@ const Contacts = () => {
                 </a>
             </div>
             <div className={Style['social-fabs']}>
-                <SocialFAB link="https://https://www.linkedin.com/in/antonio-calabrese/">
+                <SocialFAB link="https://www.linkedin.com/in/antonio-calabrese/">
                     <Linkedin />
                 </SocialFAB>
                 <SocialFAB link="https://github.com/antoniobust">

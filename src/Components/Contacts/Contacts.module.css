@@ -6,9 +6,15 @@
     bottom: 0;
     background-color: #ffffff;
     color: black;
-    flex-direction: column;
     font-size: 1em;
     padding: 16px;
+}
+
+.contacts a {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
 }
 
 .email{
@@ -22,11 +28,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.email a {
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
 }
 
 .social-fabs{
