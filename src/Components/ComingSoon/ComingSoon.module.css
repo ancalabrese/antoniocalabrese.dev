@@ -5,15 +5,19 @@
   bottom: 0;
   font-size: 1.5em;
   color: var(--accent-color-light);
-  animation: color-change 10s infinite alternate;
+  animation: color-change 6s infinite alternate;
   text-align: center;
   background-color: var(--primary-color-dark);
 }
+
+.coming-soon p {
+  position: relative;
+  top: 40%;
+}
   
   @keyframes color-change {
-    0% { color: var(--accent-color-light); }    
-    25% { color: var(--accent-color); }
-    50% { color: var(--accent-color-dark); }
-    75% { color: var(--primary-color); } 
-    100% { color: var(--primary-color-dark); }
+    0% { color: white; }    
+    50% { color: var(--accent-color); }
+    100% { color: var(--accent-color-dark); }
+
   }

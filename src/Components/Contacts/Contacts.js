@@ -12,7 +12,7 @@ const Contacts = () => {
     return (
         <div className={Style.contacts}>
             <div className={Style.email}>
-                <p>Reach out to me... send me an email!</p>
+                <p>If you wish to talk or contribute connect with me!</p>
                 <a haref="mailto:antobiobust@gmail.com?subject=Hey Antonio, nice work!">
                     <EmailIcon className={Style['email-icon']} /> antoniobust@gmail.com
                 </a>
