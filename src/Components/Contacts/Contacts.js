@@ -11,11 +11,12 @@ import Twitter from '@material-ui/icons/Twitter'
 const Contacts = () => {
     return (
         <div className={Style.contacts}>
+            <p>If you wish to talk or contribute connect with me!</p>
             <div className={Style.email}>
-                <p>If you wish to talk or contribute connect with me!</p>
-                <a haref="mailto:antobiobust@gmail.com" target="_blank">
-                    <EmailIcon className={Style['email-icon']} /> antoniobust@gmail.com
-                </a>
+                
+                <SocialFAB haref="mailto:antobiobust@gmail.com" target="_blank">
+                    <EmailIcon className={Style['email-icon']} /></SocialFAB> antoniobust@gmail.com
+                
             </div>
             <div className={Style['social-fabs']}>
                 <SocialFAB link="https://www.linkedin.com/in/antonio-calabrese/">
