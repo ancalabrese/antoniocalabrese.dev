@@ -1,7 +1,15 @@
 .navigation{
     margin: 0;
-    width: 100%;
-    flex-grow: 1;
+    flex: 1 1 100%;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;
+}
+.navigation ul{
+    list-style-type: none;
+    float: right;
+}
+.navigation ul li{
+    float: left;
+    width: 102px;
+    text-align: center;
 }

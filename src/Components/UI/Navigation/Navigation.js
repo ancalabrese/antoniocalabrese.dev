@@ -7,10 +7,12 @@ class Navigation extends Component {
     render() {
         return (
             <nav className={Style.navigation}>
-                <NavItem link="#contacts">Contacts</NavItem>
-                <NavItem link="#projects">Projects</NavItem>
-                <NavItem link="#about-me">About me</NavItem>
-                <NavItem link="#home">Home</NavItem>
+                <ul>
+                    <li><NavItem link="/home">Home</NavItem></li>
+                    <li><NavItem link="/about-me">About me</NavItem></li>
+                    <li><NavItem link="/projects">Projects</NavItem></li>
+                    <li><NavItem link="/contacts">Contacts</NavItem></li>
+                </ul>
             </nav>
         )
     }

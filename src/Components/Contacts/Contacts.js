@@ -13,7 +13,7 @@ const Contacts = () => {
         <div className={Style.contacts}>
             <div className={Style.email}>
                 <p>If you wish to talk or contribute connect with me!</p>
-                <a haref="mailto:antobiobust@gmail.com?subject=Hey Antonio, nice work!">
+                <a haref="mailto:antobiobust@gmail.com" target="_blank">
                     <EmailIcon className={Style['email-icon']} /> antoniobust@gmail.com
                 </a>
             </div>

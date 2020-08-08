@@ -1,26 +1,23 @@
-.nav_item {
-    width: 92px;
-    margin: auto 6px ;
-    /* border:2px black solid; */
+
+.navItem {
+    width: 98px;
+    margin: 12px ;
     cursor: pointer;
     text-align: center;
-    border-radius: 6px;
+    /* padding-top: 5px; */
+    /* padding-bottom: 5px; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    color: var(--primary-color-light);    
     transition: 0.3s;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    box-sizing: border-box;
-    color: var(--primary-color-light)
-    
 }
 
-.nav_item:hover{
+.navItem:hover{
+        color: var(--accent-color);
+        filter: opacity(70%);
+}
+
+.navItemActive{
     color: var(--accent-color);
 }
 
-.nav_item:active{
-    color: var(--accent-color);
-}
-
-.nav_item:disabled{
-    color: var(--primary-color-dark);
-}
