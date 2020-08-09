@@ -18,10 +18,8 @@ class Layout extends Component {
                     <Home />
                     <AboutMe />
                     <Projects />
-                </main>
-                <footer>
                     <Contacts />
-                </footer>
+                </main>
             </div>
         )
     }
