@@ -8,7 +8,6 @@ class Navigation extends Component {
         return (
             <nav className={Style.navigation}>
                 <ul>
-                    <li><NavItem link="#home" active="true">Home</NavItem></li>
                     <li><NavItem link="#about-me">About me</NavItem></li>
                     <li><NavItem link="#projects">Projects</NavItem></li>
                     <li><NavItem link="#contacts">Contacts</NavItem></li>
