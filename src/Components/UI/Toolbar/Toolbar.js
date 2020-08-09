@@ -7,11 +7,10 @@ import logo from '../../../Assets/pic1.jpg'
 
 const Toolbar = (props) => {
     return (
-        <header className={Style.toolbar}>
-            <div className={Style.profile_picture}></div>
+        <div className={Style.toolbar}>
+            <div className={Style.profile_picture} />
             <Navigation />
-
-        </header>
+        </div>
     )
 }
 
