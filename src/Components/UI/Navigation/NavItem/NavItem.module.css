@@ -4,9 +4,6 @@
     margin: 12px ;
     cursor: pointer;
     text-align: center;
-    /* padding-top: 5px; */
-    /* padding-bottom: 5px; */
-    /* box-sizing: border-box; */
     text-decoration: none;
     color: var(--primary-color-light);    
     transition: 0.3s;
@@ -17,7 +14,7 @@
         filter: opacity(70%);
 }
 
-.navItemActive{
+.navItem:active{
     color: var(--accent-color);
 }
 

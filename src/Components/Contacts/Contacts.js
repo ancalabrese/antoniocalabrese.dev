@@ -10,7 +10,7 @@ import Twitter from '@material-ui/icons/Twitter'
 
 const Contacts = () => {
     return (
-        <div className={Style.contacts}>
+        <div id="contacts" className={Style.contacts}>
             <p>If you wish to talk or contribute connect with me!</p>
             <div className={Style.email}>
                 

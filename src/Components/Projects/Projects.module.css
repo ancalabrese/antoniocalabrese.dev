@@ -1,0 +1,12 @@
+
+.projects {
+  flex: 1 1 20em;
+  align-self: stretch;
+  bottom: 0;
+  font-size: 1.5em;
+  color: var(--accent-color-light);
+  animation: color-change 6s infinite alternate;
+  text-align: center;
+  background-color: var(--primary-color-dark);
+  z-index: 1;
+}

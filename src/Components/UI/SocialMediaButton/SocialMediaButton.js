@@ -1,13 +1,15 @@
 import React from 'react'
 import Style from './SocialMediaButton.module.css'
+import ReactGA from 'react-ga'
 
 const SocialMediaButton = (props) => {
 
     const onLinkClick = (link) => {
-        // ReactGA.event({
-        //     category: 'User',
-        //     action: 'Click on contact item: ' +url
-        // });
+        ReactGA.event({
+            category: "Social media reach out",
+            action: "Click on contact item: " + link,
+        });
+
         window.open(link, '_blank');
     }
 

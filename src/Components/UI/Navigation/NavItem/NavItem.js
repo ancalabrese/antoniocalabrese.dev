@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 import Style from './NavItem.module.css'
 
 
 const NavItem = (props) => {
     return (
         <div>
-            <NavLink to={props.link} className={Style.navItem}
-                activeClassName={Style.navItemActive}>
-                {props.children}
-            </NavLink>
-        </div>
+            <HashLink to={props.link} className={Style.navItem} smooth>
+            {props.children}
+            </HashLink>
+        </div >
     )
 }
 export default NavItem;
