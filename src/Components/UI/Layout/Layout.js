@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Toolbar from '../Toolbar/Toolbar'
 import AboutMe from '../../AboutMe/AboutMe'
 import Style from './Layout.module.css'
-import Projects from '../../Projects/Projects'
+import Portfolio from '../../Portfolio/Portfolio'
 import Contacts from '../../Contacts/Contacts'
 import Home from '../../Home/Home'
 
@@ -17,7 +17,7 @@ class Layout extends Component {
                 <main>
                     <Home />
                     <AboutMe />
-                    <Projects />
+                    <Portfolio />
                     <Contacts />
                 </main>
             </div>

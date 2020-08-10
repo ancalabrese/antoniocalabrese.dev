@@ -1,13 +1,13 @@
 import React from 'react'
-import Style from './Projects.module.css'
+import Style from './Portfolio.module.css'
 import ComingSoon from '../ComingSoon/ComingSoon'
 
-const Projects = () => {
+const Portfolio = () => {
     return (
-        <div id="projects" className={Style['projects']}>
+        <div id="portfolio" className={Style['portfolio']}>
             <ComingSoon />
         </div>
     )
 }
 
-export default Projects;
+export default Portfolio;

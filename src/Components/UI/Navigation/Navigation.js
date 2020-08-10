@@ -9,7 +9,7 @@ class Navigation extends Component {
             <nav className={Style.navigation}>
                 <ul>
                     <li><NavItem link="#about-me">About me</NavItem></li>
-                    <li><NavItem link="#projects">Portfolio</NavItem></li>
+                    <li><NavItem link="#portfolio">Portfolio</NavItem></li>
                     <li><NavItem link="#contacts">Contacts</NavItem></li>
                 </ul>
             </nav>
