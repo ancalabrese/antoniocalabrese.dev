@@ -19,8 +19,7 @@
 .env.production.local
 
 #firebase
-firebase/*
-firabase.*
+.firebase/
 .firebaserc
 firebase.json
 
