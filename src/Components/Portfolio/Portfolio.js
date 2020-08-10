@@ -6,8 +6,9 @@ import DiscSpinner from '../UI/DiscSpinner/DiscSpinner'
 const Portfolio = () => {
     return (
         <div id="portfolio" className={Style['portfolio']}>
-            <ComingSoon />
-            <DiscSpinner />
+            <ComingSoon >
+                <DiscSpinner />
+            </ComingSoon>
         </div>
     )
 }
