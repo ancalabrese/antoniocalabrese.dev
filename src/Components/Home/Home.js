@@ -5,7 +5,9 @@ import signature from '../../Assets/signature.png'
 const Home = () => {
     return (
         <div id="home" className={Style.home}>
-            <div className={Style['background-container']} />
+            <div >
+                <span className={Style['background-container']} role="img" aria-hidden="true" alt="Antonio Calabrese"> </span>
+            </div>
             <div className={Style.text}>
                 <p className={Style.header}>Hi<span>,</span></p>
                 <p className={Style.header}> I<span>'</span>M ANTONIO<span>.</span></p>

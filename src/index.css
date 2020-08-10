@@ -17,7 +17,7 @@ code {
 
 :root {
   color: #fafafa;
-  --primary-color: rgb(69,90,100);
+  --primary-color: #455a64;
   --primary-color-light:  rgb(113,135,146);
   --primary-color-dark:  #1c313a;
   --accent-color: rgb(118,255,3);
