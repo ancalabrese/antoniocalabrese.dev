@@ -1,11 +1,9 @@
 .about-me{
-    color: black;
-    /* text-transform: uppercase; */
+    color: var(--primary-color-dark);
     font-size: 1.1em;
     font-weight: 300;
     background-color: white;
     z-index: 50;
-    flex: 1 1 auto;
     text-align: center;
     padding: 10%;
 }

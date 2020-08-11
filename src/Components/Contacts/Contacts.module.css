@@ -1,9 +1,10 @@
 .contacts{
+    width: 100vw;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1 1 13vw;
     bottom: 0;
     background-color: #ffffff;
     color: black;
@@ -33,10 +34,4 @@
     flex-direction: row;
     justify-content:center;
     align-items: center;
-}
-
-@media all and (max-width:1440px) and (orientation: landscape){
-    .contacts{
-        flex: 1 1 30vw;
-    }
 }

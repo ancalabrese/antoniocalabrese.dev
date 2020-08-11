@@ -1,6 +1,7 @@
 
 .portfolio {
-  flex: 1 1 70vw;
+  width: 100vw;
+  height: 60vh;
   align-self: stretch;
   bottom: 0;
   font-size: 1.5em;
@@ -9,10 +10,4 @@
   text-align: center;
   background-color: var(--primary-color-dark);
   z-index: 1;
-}
-
-@media all and (max-width:1440px) and (orientation: landscape){
-  .portfolio{
-      flex: 1 1 170vw;
-  }
 }
