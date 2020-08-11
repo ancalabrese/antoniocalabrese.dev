@@ -7,7 +7,6 @@ const Portfolio = () => {
     return (
         <div id="portfolio" className={Style['portfolio']}>
             <ComingSoon >
-                <DiscSpinner />
             </ComingSoon>
         </div>
     )

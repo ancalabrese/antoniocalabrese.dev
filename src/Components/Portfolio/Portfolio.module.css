@@ -1,13 +1,11 @@
 
 .portfolio {
-  width: 100vw;
+  width: 100%;
   height: 60vh;
-  align-self: stretch;
+  box-sizing: border-box;
   bottom: 0;
-  font-size: 1.5em;
   color: var(--accent-color-light);
-  animation: color-change 6s infinite alternate;
-  text-align: center;
+  animation: color-change 4s infinite alternate;
   background-color: var(--primary-color-dark);
   z-index: 1;
 }

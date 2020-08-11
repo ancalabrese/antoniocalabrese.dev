@@ -1,6 +1,7 @@
 .about-me{
+    width: 100%;
+    box-sizing: border-box;
     color: var(--primary-color-dark);
-    font-size: 1.1em;
     font-weight: 300;
     background-color: white;
     z-index: 50;
