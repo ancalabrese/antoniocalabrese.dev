@@ -1,8 +1,9 @@
 .contacts{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    flex: 1 1 10vw;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 13vw;
     bottom: 0;
     background-color: #ffffff;
     color: black;
@@ -19,7 +20,7 @@
 }
 
 .email{
-    flex: 1 1 3em;
+    flex: 1 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,7 +28,7 @@
 }
 
 .social-fabs{
-    flex: 1 1 3em;
+    flex: 1 0 auto;
     display: flex;
     flex-direction: row;
     justify-content:center;
