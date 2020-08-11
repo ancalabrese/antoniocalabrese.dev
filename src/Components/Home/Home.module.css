@@ -11,7 +11,7 @@
 .text{
     position: relative;
     margin-left: 10%;
-    margin-top: 10%;
+    top: 96px;
 }
 
 .header{
@@ -37,7 +37,6 @@ span{
     height: 100%;
     background-image: url('../../Assets/website_pic.png');
     filter: drop-shadow(12px 12px 16px var(--primary-color-dark));
-
     background-repeat: no-repeat;
     background-size:cover;
     background-position: right;
@@ -45,8 +44,13 @@ span{
 
 .signature {
     position: relative;
-    width: 50em;
-    left: 15%;  
+    width: 60vw;
+    max-width: 920px;
+    height: 70vh;
+    max-height: 612px;
+    left: 15%;
+    top: 10%;
+
 }
 
 .signature img {
@@ -74,8 +78,8 @@ span{
     }
     .signature {
         position: relative;
-        width: 42em;
-        top: 12em;
+        width: 82vw;
+        top: 12vh;
         left: 0px;
     }
     .background-container{
