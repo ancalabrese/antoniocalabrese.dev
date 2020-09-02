@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Style from './Portfolio.module.css'
 import ComingSoon from '../ComingSoon/ComingSoon'
-import DiscSpinner from '../UI/DiscSpinner/DiscSpinner'
-import Aux from '../UI/Aux/Aux'
+import Project from '../UI/CardElement/CardElement'
 
-const Portfolio = () => {
-    return (
-        <Aux>
+class Portfolio extends Component {
+    render() {
+        return (
             <div id="portfolio" className={Style['portfolio']}>
+                <Project>
+
+                </Project>
+                <Project>
+
+                </Project>
+                <Project>
+
+                </Project>
+                <Project>
+
+                </Project>
+                <ComingSoon />
             </div>
-            <ComingSoon />
-        </Aux>
-    )
+
+        )
+    }
 }
 
 export default Portfolio;
