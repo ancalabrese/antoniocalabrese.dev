@@ -5,11 +5,16 @@
   bottom: 0;
   font-size: 1.1em;
   color: var(--accent-color-light);
-  animation: color-change 6s infinite alternate;
   text-align: center;
   background-color: var(--primary-color-dark);
   z-index: 1;
   box-sizing: border-box;
+  animation: color-change 6s infinite alternate;
+  -webkit-animation: color-change 6s infinite alternate;
+  -moz-animation: color-change 6s infinite alternate;
+  -ms-animation: color-change 6s infinite alternate;
+  -o-animation: color-change 6s infinite alternate;
+
 }
   
   @keyframes color-change {
