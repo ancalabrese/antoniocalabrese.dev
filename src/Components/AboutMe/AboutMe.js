@@ -1,6 +1,5 @@
 import React from 'react'
 import Style from './AboutMe.module.css'
-import Aux from '../Aux/Aux'
 
 const AboutMe = (props) => {
     return (
