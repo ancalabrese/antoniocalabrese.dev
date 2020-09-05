@@ -4,11 +4,12 @@ import Style from './CardElement.module.css'
 
 const CardElement = (props) => {
     return (
-        <div className={Style.card}>
-            <div className={Style['card-header']}></div>
+        <div className={Style.card} onClick={props.expandProjectHandler}>
+            <div className={Style['card-header']} />
+        
             <div className={Style['card-title']}>
                 <span className={Style.title}>
-                    <p>Traffic Simulator</p>
+                    <p>{props.title}</p>
                 </span>
                 {/* <div className={Style['language-box']}>
                     <p>Ruby</p>
