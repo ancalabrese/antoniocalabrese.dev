@@ -39,13 +39,13 @@
     position: absolute;
     right: 0px;
     bottom: 0px;
-    width: 60%;
-    height: 100%;
+    width: 50%;
+    height: 80%;
     background-image: url('../../Assets/website_pic.png');
     filter: drop-shadow(12px 12px 16px var(--primary-color-dark));
     background-repeat: no-repeat;
-    background-size:cover;
-    background-position: right;
+    background-size:contain;
+    background-position: right bottom;
 }
 
 .signature {
