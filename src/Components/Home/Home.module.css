@@ -137,6 +137,7 @@
         opacity: 1;
     }
 }
+
 @-webkit-keyframes slide-in-right {
     0% {
       left: 50%;
@@ -148,6 +149,40 @@
         opacity: 1;
     }
 }
+@-moz-keyframes slide-in-right {
+    0% {
+      left: 50%;
+      opacity: 0;
+    }
+  
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+@-ms-keyframes slide-in-right {    
+    0% {
+      left: 50%;
+      opacity: 0;
+    }
+  
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+@-o-keyframes slide-in-right {
+    0% {
+      left: 50%;
+      opacity: 0;
+    }
+  
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+
 @keyframes slide-in-top {
     0% {
       top: -50%;
@@ -159,17 +194,48 @@
         opacity: 1;
     }
 }
-@-webkit-keyframes slide-in-top {
+
+@-webkit-keyframes slide-in-top{
     0% {
-      top: -50%;
-      opacity: 0;
+        top:-50%;
+        opacity:0;
     }
-  
     100% {
-        left: 0px;
-        opacity: 1;
+        top:0%;
+        opacity:1;
     }
 }
+@-moz-keyframes slide-in-top{
+    0% {
+        top:-50%;
+        opacity:0;
+    }
+    100% {
+        top:0%;
+        opacity:1;
+    }
+}
+@-ms-keyframes slide-in-top{
+    0% {
+        top:-50%;
+        opacity:0;
+    }
+    100% {
+        top:0%;
+        opacity:1;
+    }
+}
+@-o-keyframes slide-in-top{
+    0% {
+        top:-50%;
+        opacity:0;
+    }
+    100% {
+        top:0%;
+        opacity:1;
+    }
+}
+
 @keyframes slide-in-left {
     0% {
       left: -50%;
@@ -181,15 +247,45 @@
         opacity: 1;
     }
 }
-@-webkit-keyframes slide-in-left {
-    0% {
-      left: -50%;
-      opacity: 0;
+
+@-webkit-keyframes slide-in-left{
+    0%{
+        left:-50%;
+        opacity:0;
     }
-  
-    100% {
-        left: 0px;
-        opacity: 1;
+    100%{
+        left:0%;
+        opacity:1;
+    }
+}
+@-moz-keyframes slide-in-left{
+    0%{
+        left:-50%;
+        opacity:0;
+    }
+    100%{
+        left:0%;
+        opacity:1;
+    }
+}
+@-ms-keyframes slide-in-left{
+    0%{
+        left:-50%;
+        opacity:0;
+    }
+    100%{
+        left:0%;
+        opacity:1;
+    }
+}
+@-o-keyframes slide-in-left{
+    0%{
+        left:-50%;
+        opacity:0;
+    }
+    100%{
+        left:0%;
+        opacity:1;
     }
 }
 
