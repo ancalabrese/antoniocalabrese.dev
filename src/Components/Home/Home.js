@@ -1,6 +1,6 @@
 import React from 'react'
 import Style from './Home.module.css'
-import signature from '../../Assets/signature.png'
+import signature from '../../Assets/signature-cropped.png'
 
 const Home = () => {
     return (
