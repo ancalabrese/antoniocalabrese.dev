@@ -27,7 +27,11 @@
     font-weight: 500;
 }
 
-span{
+.header > * , .sub-header > * {
+    position: relative;
+}
+
+.highlight{
     color: var(--accent-color);
 }
 
@@ -69,6 +73,124 @@ span{
 
 .background{
     z-index: 1;
+}
+
+.slide-in-right{
+    animation-name: slide-in-right;
+}
+
+.slide-in-top{
+    animation-name: slide-in-top;
+}
+.slide-in-left{
+    animation-name: slide-in-left;
+}
+
+.animated{
+    animation-duration: 900ms;
+    animation-fill-mode:forwards;
+    animation-timing-function: cubic-bezier(0.75, 1.24, 0.93, 1.14);
+    animation-iteration-count: 1;
+    opacity: 0;
+
+}
+.animated-fast{
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    opacity: 0;
+
+}
+.animated:active{
+    animation-name: slide-in-right;
+}
+
+#H{
+    animation-delay: 100ms;
+}
+
+#I{
+    animation-delay: 1000ms;
+}
+
+#name{
+    animation-delay: 1000ms;
+}
+
+#first-sub-header{
+    animation-delay: 1300ms;
+}
+
+#second-sub-header{
+    animation-delay: 1400ms;
+}
+
+@keyframes slide-in-right {
+    0% {
+      left: 50%;
+      opacity: 0;
+    }
+  
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes slide-in-right {
+    0% {
+      left: 50%;
+      opacity: 0;
+    }
+  
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+@keyframes slide-in-top {
+    0% {
+      top: -50%;
+      opacity: 0;
+    }
+  
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes slide-in-top {
+    0% {
+      top: -50%;
+      opacity: 0;
+    }
+  
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+@keyframes slide-in-left {
+    0% {
+      left: -50%;
+      opacity: 0;
+    }
+  
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes slide-in-left {
+    0% {
+      left: -50%;
+      opacity: 0;
+    }
+  
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
 }
 
 @media all and (min-width:768px) and (max-width: 1024px){
