@@ -12,7 +12,7 @@ class Contacts extends PureComponent {
     componentDidMount(){
         ApiClient.get(API_ENDPOINTS.SOCIAL)
             .then(response => {
-                console.log(response);
+                // console.log(response);
             })
     }
 

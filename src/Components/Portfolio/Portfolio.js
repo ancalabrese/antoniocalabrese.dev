@@ -19,7 +19,7 @@ class Portfolio extends Component {
         this.setState({ loading: true });
         ApiClient.get(API_ENDPOINTS.PROJECTS)
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 this.setState({ projects: response.data, loading: false });
             });
     }
