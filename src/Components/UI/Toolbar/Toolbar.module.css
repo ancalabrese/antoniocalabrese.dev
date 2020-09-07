@@ -20,8 +20,9 @@
     border: 2px solid var(--accent-color-dark);
     border-radius: 100%;
     box-sizing: border-box;
-    background-image: url(/static/media/pic1.59c9431c.jpg);
+    background-image: url('../../../Assets/acLogo.png');
     background-size: cover;
+    background-origin: border-box;
 }
 
 @media all and (max-width: 425px) {
