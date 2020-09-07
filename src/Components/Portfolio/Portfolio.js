@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Style from './Portfolio.module.css'
 import ComingSoon from '../ComingSoon/ComingSoon'
 import Project from '../UI/CardElement/CardElement'
+import Aux from '../UI/Aux/Aux'
 import ApiClient, { API_ENDPOINTS } from '../../ApiClient/ApiClient'
 
 class Portfolio extends Component {
@@ -38,9 +39,12 @@ class Portfolio extends Component {
             // );
         }
         return (
-            <div id="portfolio" className={Style['portfolio']}>
+            <Aux>
+                <div id="portfolio" className={Style['portfolio']}>
+                </div>
                 {projects}
-            </div>
+            </Aux>
+
 
         )
     }
