@@ -4,7 +4,7 @@ import Style from './CardElement.module.css'
 
 const CardElement = (props) => {
     return (
-        <div className={Style.card} onClick={props.expandProjectHandler}>
+        <div className={Style.card} onClick={props.clicked}>
             <div className={Style['card-header']} />
         
             <div className={Style['card-title']}>

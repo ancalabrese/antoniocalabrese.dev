@@ -1,48 +1,41 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import Style from './Portfolio.module.css'
 import ComingSoon from '../ComingSoon/ComingSoon'
 import Project from '../UI/CardElement/CardElement'
 import Aux from '../UI/Aux/Aux'
 import ApiClient, { API_ENDPOINTS } from '../../ApiClient/ApiClient'
 
-class Portfolio extends Component {
+class Portfolio extends PureComponent {
     state = {
         loading: false,
         projects: undefined
     };
 
-    onProjectSelectedHandler = (id) => {
-
+    onProjectSelectedHandler = (key) => {
+        console.log(this.state.projects[key]);
     }
 
     componentDidMount() {
         this.setState({ loading: true });
         ApiClient.get(API_ENDPOINTS.PROJECTS)
             .then((response) => {
-                // console.log(response);
                 this.setState({ projects: response.data, loading: false });
             });
     }
 
     render() {
-        let projects = <ComingSoon />;
-        if (this.state.loading != true || this.state.projects != undefined) {
-            // projects.push(
-            // Object.keys(this.state.projects).map(
-            // k => {
-            //     return this.state.projects[k]
-            //         .map((element, index) => {
-            //             return <Project key={index} projectSelectedHandler={this.onProjectSelectedHandler(index)} title={element.title} />
-            //         });
-            // }
-            // )
-            // );
+        const projects = [];
+        if (this.state.projects !== undefined && this.state.loading !== true) {
+            projects.push(Object.keys(this.state.projects).map((element, index) => {
+                return <Project clicked={() => this.onProjectSelectedHandler(element)} title={this.state.projects[element]['name']} key={index} />
+            }));
         }
         return (
             <Aux>
                 <div id="portfolio" className={Style['portfolio']}>
+                    {projects}
                 </div>
-                {projects}
+                <ComingSoon />
             </Aux>
 
 
