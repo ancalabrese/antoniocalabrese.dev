@@ -1,13 +1,13 @@
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat( 2 , minmax(min(200px,90%), .38fr));
+  grid-template-columns: repeat( 2 , minmax(min(200px,90%), .29fr));
   grid-template-rows: repeat(auto-fill, auto);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   justify-content: center;
-  padding: 12px;
-  box-sizing: border-box;
+  padding: 24px;
+  box-sizing: content-box;
   bottom: 0;
   background-color: var(--primary-color-dark);
   z-index: 1;

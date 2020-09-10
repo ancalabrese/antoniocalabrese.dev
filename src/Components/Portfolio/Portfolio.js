@@ -4,6 +4,7 @@ import ComingSoon from '../ComingSoon/ComingSoon'
 import Project from '../UI/CardElement/CardElement'
 import Aux from '../UI/Aux/Aux'
 import ApiClient, { API_ENDPOINTS } from '../../ApiClient/ApiClient'
+import ReactGA from 'react-ga'
 
 class Portfolio extends PureComponent {
     state = {
@@ -11,8 +12,12 @@ class Portfolio extends PureComponent {
         projects: undefined
     };
 
-    onProjectSelectedHandler = (key) => {
-        console.log(this.state.projects[key]);
+    onProjectSelectedHandler = (element) => {
+        ReactGA.event({
+            category: "Project check out",
+            action: "Click on project item: " + element['name'],
+        });
+        window.open(element['url'], '_blank');
     }
 
     componentDidMount() {
@@ -27,7 +32,7 @@ class Portfolio extends PureComponent {
         const projects = [];
         if (this.state.projects !== undefined && this.state.loading !== true) {
             projects.push(Object.keys(this.state.projects).map((element, index) => {
-                return <Project clicked={() => this.onProjectSelectedHandler(element)} title={this.state.projects[element]['name']} key={index} />
+                return <Project clicked={() => this.onProjectSelectedHandler(this.state.projects[element])} project={this.state.projects[element]} key={index} />
             }));
         }
         return (
@@ -37,7 +42,6 @@ class Portfolio extends PureComponent {
                 </div>
                 <ComingSoon />
             </Aux>
-
 
         )
     }

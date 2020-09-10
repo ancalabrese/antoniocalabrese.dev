@@ -16,28 +16,48 @@
 
 .card-header{
     flex: 4 0 12rem;
+    max-height: 12rem;
     background-image: url(/static/media/acLogo.ba9cf1ac.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
+.project-img {
+    position: relative;
+    min-width: 100%;
+}
+
 
 .card-title{
     flex: 1 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--primary-color);
     padding:8px;
     box-sizing:border-box;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.card-title p {
+    margin: 5px;
 }
 
 .title{
     flex: 1 0;
     color: white;
-    font-size: 1em;
-    font-weight: 600;
-    font-style: normal;
+    font-size: 1.3em;
+    font-weight: 800;
+    font-style: bold;
+}
+
+.description{
+    flex: 1 0;
+    color: white;
+    font-size: .9em;
+    font-weight: 400;
+    font-style: normal;   
 }
 
 .language-box{
