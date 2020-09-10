@@ -2,9 +2,85 @@
     width: 100%;
     box-sizing: border-box;
     color: var(--primary-color-dark);
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 1.1em;
     background-color: white;
     z-index: 50;
     text-align: center;
     padding: 10%;
 }
+
+
+.color-animated {
+    animation: gradient 7s infinite alternate;
+    animation-fill-mode: both;
+}
+
+.animated-typewriter span p{
+    overflow: hidden;
+    /* border-right: .19em solid; */
+    animation-iteration-count: 1;
+    /* white-space: nowrap; */
+    margin: 0 auto; 
+    /* letter-spacing: .12em;
+    animation : typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+    margin:1px; */
+}
+
+.animated-blink {
+    animation: blink 1s infinite alternate;
+    animation-fill-mode: both;
+}
+
+.hello-world{
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.sub-header{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.animated-typewriter span p:nth-child(1){
+    animation-delay: 0ms;
+}
+.animated-typewriter span p:nth-child(2){
+    animation-delay: 3500ms;
+}
+.animated-typewriter span p:nth-child(3){
+    animation-delay: 7000ms;
+}
+.animated-typewriter span p:nth-child(4){
+    animation-delay: 10500ms;
+}
+
+
+@keyframes gradient {
+    0%{
+        color: yellowgreen;
+    }
+    25% {
+        color: green;
+    }
+    50%{
+        color: blue;
+    }
+    75%{
+        color: cornflowerblue;
+    }
+    100%{
+        color: royalblue
+    }
+}
+/* 
+@keyframes typing {
+    from{width: 0;}
+    to {width:100%}
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent-color-dark) }
+} */
