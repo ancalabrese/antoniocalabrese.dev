@@ -10,7 +10,7 @@ const AboutMe = (props) => {
 
             <div className={Style['animated-typewriter']}>
                 <span><p>I'm Antonio</p></span>
-                <span><p>I was born {new Date().getFullYear() - 1991} years ago in the sunnny Apulia, Italy &#127774;🏖</p></span>
+                <span><p>I was born {new Date().getFullYear() - 1991} years ago in the sunnny <a target="_blank" rel="noopener noreferrer" href='https://www.google.com/maps/place/72100+Brindisi+BR,+Italia/@40.6422249,17.9009941,13z/data=!3m1!4b1!4m5!3m4!1s0x13467a3bc980ec6d:0x110cef7cc03daf9!8m2!3d40.6327278!4d17.9417616' className={Style['color-animated']}>Apulia, Brindisi Italy</a> &#127774;🏖</p></span>
             </div>
             <div className={Style['animated-typewriter']}>
                 <span><p>I like creating stuff with code or bolts and screws.</p></span>

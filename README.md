@@ -1,3 +1,3 @@
 # antonio-calabrese.com
 Personal Website built with React.
-Please visit <a href="https://personalwebsite-eaf2d.web.app">antonio-calabrese.com</a>
+Please visit <a href="https://antonio-calabrese.com" rel="me noopener">antonio-calabrese.com</a>

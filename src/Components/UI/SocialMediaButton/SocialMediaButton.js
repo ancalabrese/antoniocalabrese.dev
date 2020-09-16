@@ -10,7 +10,7 @@ const SocialMediaButton = (props) => {
             action: "Click on contact item: " + link,
         });
 
-        window.open(link, '_blank');
+        window.open(link, '_blank', 'noopener', 'me', 'noreferrer');
     }
 
 
