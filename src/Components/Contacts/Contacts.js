@@ -6,13 +6,18 @@ import Instagram from '@material-ui/icons/Instagram'
 import Linkedin from '@material-ui/icons/LinkedIn'
 import GitHub from '@material-ui/icons/GitHub'
 import Twitter from '@material-ui/icons/Twitter'
-import ApiClient, {API_ENDPOINTS} from '../../ApiClient/ApiClient'
+import ApiClient, { API_ENDPOINTS } from '../../ApiClient/ApiClient'
 
 class Contacts extends PureComponent {
-    componentDidMount(){
+    state = {
+        loading: false,
+        links: undefined
+    }
+    componentDidMount() {
+        this.setState({ loading: true });
         ApiClient.get(API_ENDPOINTS.SOCIAL)
             .then(response => {
-                // console.log(response);
+                this.setState({ links: response.data, loading: false });
             })
     }
 
@@ -22,21 +27,21 @@ class Contacts extends PureComponent {
                 <p>If you wish to talk or contribute connect with me!</p>
                 <div className={Style.email}>
 
-                    <SocialFAB haref="mailto:antobiobust@gmail.com" target="_blank">
+                    <SocialFAB href={this.state.links === undefined ? "#" : "mailto:".concat(this.state.links.gmail.url)} target="_blank">
                         <EmailIcon className={Style['email-icon']} /></SocialFAB> antoniobust@gmail.com
 
             </div>
                 <div className={Style['social-fabs']}>
-                    <SocialFAB link="https://www.linkedin.com/in/antonio-calabrese/">
+                    <SocialFAB link={this.state.links === undefined ? "#" : this.state.links.linkedin.url}>
                         <Linkedin />
                     </SocialFAB>
-                    <SocialFAB link="https://github.com/antoniobust">
+                    <SocialFAB link={this.state.links === undefined ? "#" : this.state.links.github.url}>
                         <GitHub />
                     </SocialFAB>
-                    <SocialFAB link="https://www.instagram.com/antonio_bust">
+                    <SocialFAB link={this.state.links === undefined ? "#" : this.state.links.ig.url}>
                         <Instagram />
                     </SocialFAB>
-                    <SocialFAB link="https://twitter.com/antonioBust91">
+                    <SocialFAB link={this.state.links === undefined ? "#" : this.state.links.twitter.url}>
                         <Twitter />
                     </SocialFAB>
                 </div>
