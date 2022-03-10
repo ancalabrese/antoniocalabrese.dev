@@ -28,7 +28,7 @@ const AboutMe = (props) => {
             </div> */}
             <div className={Style['animated-typewriter']}>
                 <span><p>I hope you like my projects, if you want to get in touch <a href="#contacts" className={Style['color-animated']}>connect with me!</a></p></span>
-                <span><p>If you want to hire me here is my <a href="#" onClick={() => clickHandler('https://drive.google.com/file/d/1moPy6O5y4-QvHeFGBvhiVQ8PoMlTFWr-/view?usp=sharing')} className={Style['color-animated']}>CV!</a></p></span>
+                <span><p>If you want to hire me here is my <a href="#cv" onClick={() => clickHandler('https://drive.google.com/file/d/1moPy6O5y4-QvHeFGBvhiVQ8PoMlTFWr-/view?usp=sharing')} className={Style['color-animated']}>CV!</a></p></span>
             </div>
         </div>
     )

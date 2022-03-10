@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { HashLink } from 'react-router-hash-link';
 import Style from './NavItem.module.css'
 
