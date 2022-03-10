@@ -6,6 +6,7 @@
     transition: 0.3s;
     box-sizing: content-box;
     overflow: hidden;
+    max-width: 18rem;
 }
 
 .card:hover{
@@ -24,6 +25,8 @@
 .project-img {
     position: relative;
     min-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 
