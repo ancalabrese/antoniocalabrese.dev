@@ -5,7 +5,7 @@ const Toolbar = ({ contacts }) => {
     return (
         <div className={toolBarStyle}>
             <Logo />
-            <Navigation />
+            <Navigation  contacts={contacts}/>
         </div >
     )
 }
@@ -24,10 +24,10 @@ const Navigation = ({ contacts }) => {
     return (
         <nav className="justify-self-start text-primary-dark">
             <ul className='list-none flex flex-row m-0 p-0 items-center'>
-                <li className='mx-1 sm:mx-2.5 hover:cursor-pointer'><NavItem link={contacts?.medium} primaryAction={false}>Blog</NavItem></li>
-                <li className='mx-1 sm:mx-2.5 hover:cursor-pointer'><NavItem link={contacts?.github} primaryAction={false}>Github</NavItem></li>
-                <li className='mx-1 sm:mx-2.5 hover:cursor-pointer'><NavItem link={"emailto:" + contacts?.email} primaryAction={false}>Contact</NavItem></li>
-                <li className='mx-1 sm:mx-2.5 hover:cursor-pointer'><NavItem link={contacts?.resume} primaryAction={true}>Resume</NavItem></li>
+                <li className='mx-1 sm:mx-2.5 hover:cursor-pointer'><NavItem link={contacts?.medium?.url} primaryAction={false}>Blog</NavItem></li>
+                <li className='mx-1 sm:mx-2.5 hover:cursor-pointer'><NavItem link={contacts?.github?.url} primaryAction={false}>Github</NavItem></li>
+                <li className='mx-1 sm:mx-2.5 hover:cursor-pointer'><NavItem link={"emailto:" + contacts?.email?.url} primaryAction={false}>Contact</NavItem></li>
+                <li className='mx-1 sm:mx-2.5 hover:cursor-pointer'><NavItem link={contacts?.resume?.url} primaryAction={true}>Resume</NavItem></li>
             </ul>
         </nav>
     )
@@ -37,8 +37,13 @@ const NavItem = ({ children, link, primaryAction }) => {
     const itemStyle = "w-22 text-on-primary transition-all hover:text-secondary active:text-secondary"
     const boxstyle = primaryAction ? "border-solid rounded border-secondary border-2 p-2 text-secondary hover:text-secondary-light" : ""
     const finalStyle = boxstyle.concat(" ", itemStyle)
+
+    const openLink = (link) => {
+        window.open(link, '_blank', 'noopener', 'me', 'noreferrer');
+    }
+
     return (
-        <div className={finalStyle}>
+        <div className={finalStyle} onClick={() => openLink(link)}>
             {children}
         </div>
     )

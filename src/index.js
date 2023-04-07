@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOMClient from 'react-dom/client';
 import './index.css';
 import App from './Components/App/App';
 import * as serviceWorker from './serviceWorker';
-import ReactGA from 'react-ga';
+import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from 'firebase/app'
+import { getDatabase, ref, onValue } from "firebase/database";
 
-const trackingID = process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test" ? null : 'UA-158221881-1';
-ReactGA.initialize(trackingID);
+const dev = process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
 const container = document.getElementById('root');
 
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAnE1IYpfDkI11HREb3bopHHdZt4xtjnZM",
+  authDomain: "personalwebsite-eaf2d.firebaseapp.com",
+  databaseURL: "https://personalwebsite-eaf2d.firebaseio.com",
+  projectId: "personalwebsite-eaf2d",
+  storageBucket: "personalwebsite-eaf2d.appspot.com",
+  messagingSenderId: "451705051635",
+  appId: "1:451705051635:web:4eebc4f1949c232bcf9a86",
+  measurementId: "G-7KENTQ95DF"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app)
+const analytics = dev ? null : getAnalytics(app)
+
 const root = ReactDOMClient.createRoot(container)
-root.render(<React.StrictMode>
-  <App />
-</React.StrictMode>
+
+root.render(
+  <React.StrictMode>
+    <App firebaseApp={app} />
+  </React.StrictMode>
 )
 
 // If you want your app to work offline and load faster, you can change

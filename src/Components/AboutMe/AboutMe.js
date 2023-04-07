@@ -1,13 +1,8 @@
 import React from 'react'
 import Style from './AboutMe.module.css'
-import ReactGA from 'react-ga'
 
 const AboutMe = () => {
-	const clickHandler = (link) => {
-		ReactGA.event({
-			category: "CV check",
-			action: "CV checked",
-		});
+	const clickHandler = (link) => {);
 
 		window.open(link, '_blank', 'noopener', 'me', 'noreferrer');
 	}
