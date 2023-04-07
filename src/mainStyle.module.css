@@ -1,0 +1,10 @@
+.main-content{ 
+    margin-top: 48px;
+}
+
+
+@media screen and (max-width:499px) {
+    .desktop-only {
+        display:none !important;
+    }
+}
