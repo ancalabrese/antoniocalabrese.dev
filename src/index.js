@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOMClient from 'react-dom/client';
 import './index.css';
-import App from './Components/App/App';
+import App from './Components/App';
 import * as serviceWorker from './serviceWorker';
 import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from 'firebase/app'
-import { getDatabase, ref, onValue } from "firebase/database";
 
 const dev = process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
 const container = document.getElementById('root');

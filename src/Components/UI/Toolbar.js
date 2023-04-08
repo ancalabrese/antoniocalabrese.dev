@@ -1,4 +1,4 @@
-import AC_logo from '../../../Assets/AC_logo.svg'
+import AC_logo from '../../Assets/AC_logo.svg'
 
 const Toolbar = ({ contacts }) => {
     let toolBarStyle = 'px-4 py-0 h-14 flex flex-row items-center place-content-center sm:place-content-between after:content bg-primary'

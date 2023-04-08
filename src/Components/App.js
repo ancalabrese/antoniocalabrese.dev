@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import MainSection from '../Main/Main';
-import Toolbar from '../UI/Toolbar/Toolbar';
+import MainSection from './Main';
+import Toolbar from './UI/Toolbar';
 import { get, getDatabase, onValue, ref } from 'firebase/database';
 
 
@@ -12,7 +12,7 @@ const App = ({ firebaseApp }) => {
       instagram: { url: "#" },
       email: { url: "#" },
       linkedin: { url: "#" },
-      resume:{url:"#"},
+      resume: { url: "#" },
     }
   }
   const [metadata, setMetadata] = useState(initialState)
