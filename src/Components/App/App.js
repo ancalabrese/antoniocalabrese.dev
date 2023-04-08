@@ -12,6 +12,7 @@ const App = ({ firebaseApp }) => {
       instagram: { url: "#" },
       email: { url: "#" },
       linkedin: { url: "#" },
+      resume:{url:"#"},
     }
   }
   const [metadata, setMetadata] = useState(initialState)
@@ -29,7 +30,7 @@ const App = ({ firebaseApp }) => {
   return (
     <div className="top-0 left-0 bg-primary min-h-screen flex flex-col">
       <header className='sticky top-0 z-[99] grow-0 shrink-0'>
-        <Toolbar contacts={metadata.Social} />
+        <Toolbar contacts={metadata.Contacts} />
       </header>
       <MainSection metadata={metadata} />
     </div>

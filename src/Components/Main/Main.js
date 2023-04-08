@@ -16,7 +16,7 @@ const MainSection = ({ metadata }) => {
                     <img src={MemojiWork} className='h-auto max-w-[15em] mx-auto sm:max-w-xs lg:mr-10 xlg:max-w-md drop-shadow-[0px_0px_6px_rgb(40,55,60,1)]' />
                 </div>
             </div>
-            {<Social social={metadata.Social} />}
+            {<Social social={metadata.Contacts} />}
         </>
 
     )
