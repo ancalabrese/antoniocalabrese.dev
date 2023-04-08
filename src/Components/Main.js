@@ -43,7 +43,7 @@ const Social = ({ social }) => {
         <div className="absolute bottom-6 lg:bottom-1 px-4 sm:px-12 md:px-18">
             <div className='flex flex-col place-content-start gap-1  md:flex-row md:gap-3'>
                 {fabs.map((fab, index) => {
-                    return <div className='w-[2em] h-[2em] p-2 text-on-secondary hover:shadow-secondary-light lg:w-[4em] lg:h-[4em]' key={index}>
+                    return <div className='w-[2em] h-[2em] p-2 text-on-primary lg:w-[4em] lg:h-[4em]' key={index}>
                         {fab}
                     </div>
                 })}
