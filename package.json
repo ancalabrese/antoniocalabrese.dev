@@ -1,24 +1,23 @@
 {
-  "name": "calabreseantonio.com",
+  "name": "ancalabrese.dev",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@react-native-firebase/app": "^8.3.0",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.4",
-    "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.26.1",
-    "firebase": "^9.6.8",
-    "firebase-tools": "^10.2.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-ga": "^3.1.2",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-router-hash-link": "^2.0.0",
-    "react-scripts": "^5.0.0"
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.11.16",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "axios": "^1.3.5",
+    "firebase": "^9.19.1",
+    "material-ui": "^0.20.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^3.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,7 +26,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
