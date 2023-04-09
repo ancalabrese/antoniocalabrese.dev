@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MainSection from './Main';
-import Toolbar from './UI/Toolbar';
+import Toolbar from './Toolbar';
 import { get, getDatabase, onValue, ref } from 'firebase/database';
 
 
