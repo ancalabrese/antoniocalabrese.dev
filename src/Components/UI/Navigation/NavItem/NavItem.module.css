@@ -1,0 +1,20 @@
+
+.navItem {
+    width: 98px;
+    margin: 12px ;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color-light);    
+    transition: 0.3s;
+}
+
+.navItem:hover{
+        color: var(--accent-color);
+        filter: opacity(70%);
+}
+
+.navItem:active{
+    color: var(--accent-color);
+}
+
