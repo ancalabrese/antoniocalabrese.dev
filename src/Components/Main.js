@@ -13,7 +13,8 @@ const MainSection = ({ metadata }) => {
                     </span>
                 </div>
                 <div className='grow-0 lg:grow-[1] order-2 lg:place-self-end'>
-                    <img src={Memoji} className='h-auto max-w-[15em] mx-auto sm:max-w-xs lg:mr-10 xlg:max-w-md drop-shadow-[0px_0px_6px_rgb(40,55,60,1)]' />
+                    <img src={Memoji} className='h-auto max-w-[15em] mx-auto sm:max-w-xs lg:mr-10 xlg:max-w-md drop-shadow-[0px_0px_6px_rgb(40,55,60,1)]'
+                    alt='Antonio Calabrese' />
                 </div>
             </div>
             {<Social social={metadata.Contacts} />}
