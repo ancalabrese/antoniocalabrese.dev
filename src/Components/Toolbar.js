@@ -5,7 +5,7 @@ const Toolbar = ({ contacts }) => {
     return (
         <div className={toolBarStyle}>
             <Logo />
-            <Navigation  contacts={contacts}/>
+            <Navigation contacts={contacts} />
         </div >
     )
 }
@@ -14,7 +14,7 @@ const Logo = () => {
     return (
         <div className="md:grow-0 place-self-start h-full" to={"#main"}>
             <div className='h-full hidden sm:block'>
-                <img src={AC_logo} className='h-full' />
+                <img src={AC_logo} alt="Antonio Calabrese logo" className='h-full' />
             </div>
         </div>
     )
