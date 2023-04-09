@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MainSection from './Main';
 import Toolbar from './Toolbar';
-import { get, getDatabase, onValue, ref } from 'firebase/database';
+import { getDatabase, onValue, ref } from 'firebase/database';
 
 
 const App = ({ firebaseApp }) => {
@@ -25,7 +25,7 @@ const App = ({ firebaseApp }) => {
     }, {
       onlyOnce: true
     });
-  }, []);
+  }, [dbRef]);
 
   return (
     <div className="top-0 left-0 bg-primary min-h-screen flex flex-col">
