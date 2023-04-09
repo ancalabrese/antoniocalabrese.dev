@@ -1,6 +1,6 @@
 import React from 'react';
 import Memoji from '../Assets/memoji_work.png'
-import { EmailRounded, Instagram, LinkedIn, GitHub, Twitter } from '@mui/icons-material'
+import { EmailRounded, Instagram, LinkedIn, GitHub } from '@mui/icons-material'
 
 const MainSection = ({ metadata }) => {
     return (

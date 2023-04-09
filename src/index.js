@@ -22,7 +22,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = dev ? null : getAnalytics(app)
+if (dev) { getAnalytics(app) }
 
 const root = ReactDOMClient.createRoot(container)
 
