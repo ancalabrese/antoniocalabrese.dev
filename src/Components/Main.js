@@ -17,7 +17,7 @@ const MainSection = ({ metadata }) => {
                     alt='Antonio Calabrese' />
                 </div>
             </div>
-            {<Social social={metadata.Contacts} />}
+            {<Social social={metadata} />}
         </>
 
     )

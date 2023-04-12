@@ -17,20 +17,20 @@ const App = ({ firebaseApp }) => {
   }
   const [metadata, setMetadata] = useState(initialState)
   const db = getDatabase(firebaseApp)
-  const dbRef = ref(db)
+  const contactsRef = ref(db, "/Contacts")
 
   useEffect(() => {
-    return onValue(dbRef, (data) => {
+    return onValue(contactsRef, (data) => {
       setMetadata(data.val())
     }, {
       onlyOnce: true
     });
-  }, [dbRef]);
+  }, [contactsRef]);
 
   return (
     <div className="top-0 left-0 bg-primary min-h-screen flex flex-col">
       <header className='sticky top-0 z-[99] grow-0 shrink-0'>
-        <Toolbar contacts={metadata.Contacts} />
+        <Toolbar contacts={metadata} />
       </header>
       <MainSection metadata={metadata} />
     </div>
