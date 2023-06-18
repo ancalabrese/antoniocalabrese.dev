@@ -8,25 +8,37 @@ import { Helmet } from 'react-helmet';
 const App = ({ firebaseApp }) => {
 
   const initialState = {
-    Social: {
+    social: {
       github: { url: "#" },
       instagram: { url: "#" },
       email: { url: "#" },
       linkedin: { url: "#" },
       resume: { url: "#" },
+    },
+    about: {
+      job:"#",
+      org:"#" 
     }
   }
   const [metadata, setMetadata] = useState(initialState)
   const db = getDatabase(firebaseApp)
   const contactsRef = ref(db, "/Contacts")
+  const aboutRef = ref(db, "/About")
 
-  useEffect(() => {
-    return onValue(contactsRef, (data) => {
-      setMetadata(data.val())
+   useEffect(() => {
+     onValue(contactsRef, (data) => {
+      setMetadata({...metadata, ...data.val()})
     }, {
       onlyOnce: true
     });
-  }, [contactsRef]);
+
+    onValue(aboutRef, (data) => {
+      metadata.about = data.val()
+      setMetadata({ ...metadata, ...data.val() })
+    }, {
+      onlyOnce: true
+    });
+  }, []);
 
   return (
     <>
@@ -83,7 +95,7 @@ const App = ({ firebaseApp }) => {
         <header className='sticky top-0 z-[99] grow-0 shrink-0'>
           <Toolbar contacts={metadata} />
         </header>
-        <MainSection metadata={metadata} />
+        <MainSection  social={metadata.social} about={metadata.about} />
       </div>
     </>
   );

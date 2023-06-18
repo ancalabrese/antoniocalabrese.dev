@@ -2,22 +2,22 @@ import React from 'react';
 import Memoji from '../Assets/memoji_work.png'
 import { EmailRounded, Instagram, LinkedIn, GitHub } from '@mui/icons-material'
 
-const MainSection = ({ metadata }) => {
+const MainSection = ({ about, social }) => {
     return (
         <>
             <div className='grow shrink-0 flex flex-col place-content-end gap-[2em] h-full px-4 sm:px-12 md:px-16 lg:px-22 xl:px-24 2xl:px-[24rem] lg:flex-row lg:place-content-center lg:gap-2'>
                 <div className='order-1 place-self-center basis-48 grow-0 min-h-[10em] lg:grow-[2] lg:m-auto'>
                     <span className='text-center font-black tracking-tight divide-y-4 text-on-primary divide-secondary-dark'>
                         <p className="text-8xl sm:text-9xl lg:text-left after:content-['!'] after:text-secondary-light">Ciao</p>
-                        <p className='text-xl sm:text-xl lg:text-right italic font-serif'>This is <span className='text-secondary-light'>Antonio!</span></p>
+                        <p className='text-xl sm:text-xl lg:text-right italic font-serif'>It's <span className='text-secondary-light'>Antonio!</span> {about.job} <span className='text-secondary-light'>@{about.org}.</span></p>
                     </span>
                 </div>
                 <div className='grow-0 lg:grow-[1] order-2 lg:place-self-end'>
                     <img src={Memoji} className='h-auto max-w-[15em] mx-auto sm:max-w-xs lg:mr-10 xlg:max-w-md drop-shadow-[0px_0px_6px_rgb(40,55,60,1)]'
-                    alt='Antonio Calabrese' />
+                        alt='Antonio Calabrese' />
                 </div>
             </div>
-            {<Social social={metadata} />}
+            {<Social social={social} />}
         </>
 
     )
