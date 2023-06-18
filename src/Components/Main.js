@@ -7,9 +7,11 @@ const MainSection = ({ about, social }) => {
         <>
             <div className='grow shrink-0 flex flex-col place-content-end gap-[2em] h-full px-4 sm:px-12 md:px-16 lg:px-22 xl:px-24 2xl:px-[24rem] lg:flex-row lg:place-content-center lg:gap-2'>
                 <div className='order-1 place-self-center basis-48 grow-0 min-h-[10em] lg:grow-[2] lg:m-auto'>
-                    <span className='text-center font-black tracking-tight divide-y-4 text-on-primary divide-secondary-dark'>
+                    <span className='text-center font-black tracking-tight text-on-primary'>
                         <p className="text-8xl sm:text-9xl lg:text-left after:content-['!'] after:text-secondary-light">Ciao</p>
-                        <p className='text-xl sm:text-xl lg:text-right italic font-serif'>It's <span className='text-secondary-light'>Antonio!</span> {about.job} <span className='text-secondary-light'>@{about.org}.</span></p>
+                        <hr class="h-[3px] my-4 border-0 bg-secondary-dark"></hr>
+                        <p className='text-xl sm:text-xl lg:text-right italic font-serif'>... It's <span className='text-secondary-light'>Antonio!</span></p>
+                        <p className='text-xl sm:text-xl lg:text-right italic font-serif'> {about.job} <span className='text-secondary-light'>@{about.org}</span>.</p>
                     </span>
                 </div>
                 <div className='grow-0 lg:grow-[1] order-2 lg:place-self-end'>
