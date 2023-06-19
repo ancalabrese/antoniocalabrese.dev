@@ -28,13 +28,13 @@ const App = ({ firebaseApp }) => {
 
   function downloadMetaData() {
     get(contactsRef).then((data) => {
-      if (contacts.email.url != "#") return
+      if (contacts.email.url !== "#") return
 
       setSocial(data.val())
     })
 
     get(aboutRef).then((data) => {
-      if (about.job != "#") return
+      if (about.job !== "#") return
 
       setAbout(data.val())
     })
