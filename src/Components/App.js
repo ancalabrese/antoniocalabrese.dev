@@ -1,44 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import MainSection from './Main';
 import Toolbar from './Toolbar';
-import { getDatabase, onValue, ref } from 'firebase/database';
+import { getDatabase, get, ref } from 'firebase/database';
 import { Helmet } from 'react-helmet';
 
 
 const App = ({ firebaseApp }) => {
 
-  const initialState = {
-    social: {
-      github: { url: "#" },
-      instagram: { url: "#" },
-      email: { url: "#" },
-      linkedin: { url: "#" },
-      resume: { url: "#" },
-    },
-    about: {
-      job:"#",
-      org:"#" 
-    }
+  const contactsDefault = {
+    github: { url: "#" },
+    ig: { url: "#" },
+    email: { url: "#" },
+    linkedin: { url: "#" },
+    resume: { url: "#" },
   }
-  const [metadata, setMetadata] = useState(initialState)
+
+  const aboutDefault = {
+    job: "#",
+    org: "#"
+  }
+
+  const [contacts, setSocial] = useState(contactsDefault)
+  const [about, setAbout] = useState(aboutDefault)
   const db = getDatabase(firebaseApp)
   const contactsRef = ref(db, "/Contacts")
   const aboutRef = ref(db, "/About")
 
-   useEffect(() => {
-     onValue(contactsRef, (data) => {
-      setMetadata({...metadata, ...data.val()})
-    }, {
-      onlyOnce: true
-    });
+  function downloadMetaData() {
+    get(contactsRef).then((data) => {
+      if (contacts.email.url != "#") return
 
-    onValue(aboutRef, (data) => {
-      metadata.about = data.val()
-      setMetadata({ ...metadata, ...data.val() })
-    }, {
-      onlyOnce: true
-    });
-  }, []);
+      setSocial(data.val())
+    })
+
+    get(aboutRef).then((data) => {
+      if (about.job != "#") return
+
+      setAbout(data.val())
+    })
+
+  }
+
+  useEffect(() => {
+    return downloadMetaData()
+  }, [contacts, about]);
 
   return (
     <>
@@ -93,9 +98,9 @@ const App = ({ firebaseApp }) => {
       </Helmet >
       <div className="top-0 left-0 bg-primary min-h-screen flex flex-col">
         <header className='sticky top-0 z-[99] grow-0 shrink-0'>
-          <Toolbar contacts={metadata} />
+          <Toolbar contacts={contacts} />
         </header>
-        <MainSection  social={metadata.social} about={metadata.about} />
+        <MainSection social={contacts} about={about} />
       </div>
     </>
   );

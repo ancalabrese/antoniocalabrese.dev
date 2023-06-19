@@ -9,7 +9,7 @@ const MainSection = ({ about, social }) => {
                 <div className='order-1 place-self-center basis-48 grow-0 min-h-[10em] lg:grow-[2] lg:m-auto'>
                     <span className='text-center font-black tracking-tight text-on-primary'>
                         <p className="text-8xl sm:text-9xl lg:text-left after:content-['!'] after:text-secondary-light">Ciao</p>
-                        <hr class="h-[3px] my-4 border-0 bg-secondary-dark"></hr>
+                        <hr className="h-[3px] my-4 border-0 bg-secondary-dark"></hr>
                         <p className='text-xl sm:text-xl lg:text-right italic font-serif'>... It's <span className='text-secondary-light'>Antonio!</span></p>
                         <p className='text-xl sm:text-xl lg:text-right italic font-serif'> {about.job} <span className='text-secondary-light'>@{about.org}</span>.</p>
                     </span>
