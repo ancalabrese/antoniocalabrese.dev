@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MainSection from './Main';
 import Toolbar from './Toolbar';
 import { getDatabase, get, ref } from 'firebase/database';
