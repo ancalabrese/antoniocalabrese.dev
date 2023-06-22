@@ -5,8 +5,11 @@ import App from './Components/App';
 import * as serviceWorker from './serviceWorker';
 import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from 'firebase/app'
+import GA4React from "ga-4-react";
+
 
 const dev = process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
+const prod = process.env.NODE_ENV === "production"
 const container = document.getElementById('root');
 
 
@@ -23,6 +26,12 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 if (dev) { getAnalytics(app) }
+
+if (prod) {
+  const ga4react = new GA4React(process.env.REACT_APP_GOOGLE_TAG);
+  ga4react.initialize().then().catch()
+}
+
 
 const root = ReactDOMClient.createRoot(container)
 

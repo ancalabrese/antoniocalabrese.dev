@@ -42,8 +42,8 @@ const App = ({ firebaseApp }) => {
   }
 
   useEffect(() => {
-    return downloadMetaData()
-  }, [contacts, about]);
+     return downloadMetaData()
+  }, [contacts, about, downloadMetaData]);
 
   return (
     <>
