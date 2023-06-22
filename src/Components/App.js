@@ -26,23 +26,22 @@ const App = ({ firebaseApp }) => {
   const contactsRef = ref(db, "/Contacts")
   const aboutRef = ref(db, "/About")
 
-  const downloadMetaData = useCallback(() =>{
-    get(contactsRef).then((data) => {
-      if (contacts.email.url !== "#") return
-
-      setSocial(data.val())
-    })
-
-    get(aboutRef).then((data) => {
-      if (about.job !== "#") return
-
-      setAbout(data.val())
-    })
-  })
-
   useEffect(() => {
-    downloadMetaData()
-  }, [downloadMetaData]);
+    const downlaodMedataData = () => {
+      get(contactsRef).then((data) => {
+        if (contacts.email.url !== "#") return
+
+        setSocial(data.val())
+      })
+
+      get(aboutRef).then((data) => {
+        if (about.job !== "#") return
+
+        setAbout(data.val())
+      })
+    }
+    downlaodMedataData()
+  }, []);
 
   return (
     <>
