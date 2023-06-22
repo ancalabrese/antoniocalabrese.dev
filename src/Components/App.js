@@ -41,7 +41,7 @@ const App = ({ firebaseApp }) => {
       })
     }
     downlaodMedataData()
-  }, []);
+  });
 
   return (
     <>
