@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import MainSection from './Main';
 import Toolbar from './Toolbar';
 import { getDatabase, get, ref } from 'firebase/database';
@@ -26,7 +26,7 @@ const App = ({ firebaseApp }) => {
   const contactsRef = ref(db, "/Contacts")
   const aboutRef = ref(db, "/About")
 
-  function downloadMetaData() {
+  const downloadMetaData = useCallback(() =>{
     get(contactsRef).then((data) => {
       if (contacts.email.url !== "#") return
 
@@ -38,12 +38,11 @@ const App = ({ firebaseApp }) => {
 
       setAbout(data.val())
     })
-
-  }
+  })
 
   useEffect(() => {
-     return downloadMetaData()
-  }, [contacts, about, downloadMetaData]);
+    downloadMetaData()
+  }, [downloadMetaData]);
 
   return (
     <>
