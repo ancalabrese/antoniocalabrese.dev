@@ -39,8 +39,7 @@ title = "Antonio Calabrese"
 
   [[params.nav]]
     label = "Blog"
-    url = "https://medium.com/@ancalabrese"
-    external = true
+    url = "/blog/"
 
   [[params.nav]]
     label = "GitHub"
@@ -180,3 +179,32 @@ Effortlessly manage and monitor your fleet of devices enrolled in SOTI Mobicontr
     emoji             = "🌬️"
     featured          = false
     tags              = ["Golang", "Tool"]
+
+  # Blog articles
+  [[params.articles]]
+    emoji       = "📱"
+    title       = "Cyclops: SOTI Mobicontrol on the go"
+    description = "Managing your Mobicontrol device fleet from your smartphone, anywhere."
+    url         = "https://medium.com/@ancalabrese/cyclops-mobicontrol-on-the-go-cf6ba79f8a85"
+    source      = "Medium"
+
+  [[params.articles]]
+    emoji       = "🖥️"
+    title       = "Omnissa Workspace One UEM CLI"
+    description = "A command-line interface for managing Omnissa Workspace One UEM at scale."
+    url         = "https://medium.com/@ancalabrese/workspace-one-uem-cli-d769431ad95c"
+    source      = "Medium"
+
+  [[params.articles]]
+    emoji       = "💻"
+    title       = "Mc-cli: The SOTI Mobicontrol CLI tool"
+    description = "The ultimate CLI tool for SOTI Mobicontrol — manage your fleet from the terminal."
+    url         = "https://medium.com/@ancalabrese/mc-cli-the-ultimate-soti-mobicontrol-cli-tool-dfeb87dc7702"
+    source      = "Medium"
+
+  [[params.articles]]
+    emoji       = "⚙️"
+    title       = "Introducing Reload: hot-reloading configuration files for Go"
+    description = "A lightweight Go library that watches config files and reloads them automatically without restarting your app."
+    url         = "https://medium.com/@ancalabrese/reload-introduction-easy-configuration-reload-dbc4dabef319"
+    source      = "Medium"

@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="blog-page">
+  <div class="container">
+    <div class="blog-header">
+      <h1 class="blog-title">✍️ Writing</h1>
+      <p class="blog-subtitle">Thoughts on stuff I build.</p>
+    </div>
+    <div class="article-list">
+      {{ range .Site.Params.articles }}
+      <a href="{{ .url }}" class="article-item" target="_blank" rel="noopener">
+        <span class="article-emoji">{{ .emoji }}</span>
+        <div class="article-body">
+          <h2 class="article-title">{{ .title }}</h2>
+          <p class="article-description">{{ .description }}</p>
+        </div>
+        <div class="article-meta">
+          <span class="article-source">{{ .source }}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"/></svg>
+        </div>
+      </a>
+      {{ else }}
+      <p class="blog-empty">No articles yet — check back soon.</p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
