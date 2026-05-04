@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ partial "seo.html" . }}
+    {{ partial "head.html" . }}
+    {{ if and (hugo.IsProduction) (.Site.Params.googleAnalytics) }}
+    {{ partial "analytics.html" . }}
+    {{ end }}
+</head>
+<body>
+    <svg aria-hidden="true" style="width:0;height:0;position:absolute;overflow:hidden">
+      <defs>
+        <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--primary-color)"/>
+          <stop offset="100%" stop-color="var(--secondary-color)"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    {{ if .IsHome }}<div class="particles" id="particles"></div>{{ end }}
+    {{ partial "header.html" . }}
+    <main id="main" role="main">
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+</body>
+</html>

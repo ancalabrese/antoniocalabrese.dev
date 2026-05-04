@@ -1,0 +1,184 @@
+baseURL = "https://antoniocalabrese.dev/"
+defaultContentLanguage = "en"
+title = "Antonio Calabrese"
+
+[pagination]
+  pagerSize = 6
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  author = "Antonio Calabrese"
+  logo = "AC"
+  subtitle = "Software Engineer"
+  location = "London"
+  jobTitle  = "Software Engineer & Indie Developer — Android & Go"
+  workplace = "Google"
+  activities = ["Turning Keystrokes into Bugs 👨🏻‍💻", "Surviving Wipeouts 🏄", "Lifting Heavy Things 🏋️", "Eating Pizza 🍕"]
+  googleAnalytics = "G-84ZB543WE7"
+
+  profileImage = "/images/og-image.jpg"
+  aboutMe = "I'm a Software Engineer at Google by day and an indie developer by night. I spend my time building Android apps with Kotlin and Jetpack Compose, writing backend services in Go, and occasionally surviving wipeouts in the ocean. I care deeply about craftsmanship — whether that's clean architecture, smooth animations, or a perfectly timed pizza. When I'm not shipping code, I'm probably lifting heavy things or planning the next side project that will definitely ship this time."
+
+  # SEO
+  seoTitle    = "Antonio Calabrese | Software Engineer & Indie Developer"
+  description = "Antonio Calabrese is a Software Engineer at Google and indie developer, building Android apps, Go backends, and indie mobile apps. Explore projects, engineering blog, and more."
+  keywords    = ["Antonio Calabrese", "Software Engineer", "Google", "Indie Developer", "Indie App Developer", "Indie Android Developer", "Android Developer", "Android Engineering", "Golang", "Go Developer", "Backend Engineering", "Indie Hacker", "Side Projects", "Engineering Blog"]
+  twitterHandle = "@ancalabrese"
+  ogImage     = "/images/og-image.jpg"
+
+  # Navigation links
+  [[params.nav]]
+    label = "Projects"
+    url = "/portfolio/"
+    accent = true
+
+  [[params.nav]]
+    label = "About Me"
+    url = "/about/"
+
+  [[params.nav]]
+    label = "Blog"
+    url = "https://medium.com/@ancalabrese"
+    external = true
+
+  [[params.nav]]
+    label = "GitHub"
+    url = "https://github.com/ancalabrese"
+    external = true
+
+  [[params.nav]]
+    label = "Resume"
+    url = "https://docs.google.com/document/d/15Fj7Frs1Hzu3D2p9LWNXhAVQ4_EwssLYWUxMc8l1Jlg"
+    external = true
+
+  # Homepage social icon row
+  [params.social_icons]
+    email    = "mailto:anjcalabrese@gmail.com"
+    github   = "https://github.com/ancalabrese"
+    linkedin = "https://linkedin.com/in/antoniogcalabrese"
+    instagram = "https://github.com/anclabrese"
+
+  # Social / contact links
+  [[params.social]]
+    name = "GitHub"
+    class = "github"
+    icon = "💻"
+    description = ""
+    url = "https://github.com/anclabrese"
+    button_text = "View Profile"
+
+  [[params.social]]
+    name = "LinkedIn"
+    class = "linkedin"
+    icon = "🔗"
+    description = ""
+    url = "https://linkedin.com/in/antoniogcalabrese"
+    button_text = "Connect"
+
+  [[params.social]]
+    name = "Medium"
+    class = "medium"
+    icon = "✍️"
+    description = ""
+    url = "https://medium.com/@ancalabrese"
+    button_text = "Read Articles"
+
+  [[params.contact]]
+    icon = "📧"
+    name = "email"
+    value = "anjcalabrese@gmail.com"
+
+  # Projects — set featured = true for the top 4 (displayed as large cards)
+  [[params.projects]]
+    name              = "Waypoint: GPS Test"
+    short_description = "Professional GNSS status, barometric altimeter & Backtrack navigation tool."
+    long_description  = """Experience a high-performance, modern alternative to traditional GPS test tools.\
+Waypoint is a technical utility designed for engineers, surveyors, hikers, and power users who require precise GNSS data, high-fidelity altitude analysis, and professional navigation tools."""
+    action_label      = "Download on Play"
+    action_url        = "https://play.google.com/store/apps/details?id=waypoint.gps.test"
+    image             = "/images/projects/waypoint-hero-img.png"
+    emoji             = "🛰️"
+    featured          = true
+    tags              = ["Android", "Kotlin", "Compose"]
+
+  [[params.projects]]
+    name              = "LockIn: Group workout tracker"
+    short_description = "The only group workout tracker. If one fails, everyone fails."
+    long_description  = """Stop relying on motivation. Put your friendship on the line.\
+Most fitness apps fail because they rely on willpower. LockIn relies on something stronger: the fear of your friends hating you."""
+    action_label      = "Download on Play"
+    action_url        = "https://play.google.com/store/apps/details?id=lockin.streak.counter.gym"
+    image             = "/images/projects/lockin-hero.png"
+    emoji             = "🔥"
+    featured          = true
+    tags              = ["Android", "Kotlin", "Compose"]
+
+  [[params.projects]]
+    name              = "Cyclops for Mobicontrol"
+    short_description = "Effortlessly manage and monitor devices enrolled in Mobicontrol while on the go."
+    long_description  = """Cyclops is a powerful mobile application designed for IT admin, providing seamless access to your Mobicontrol web console.\
+Effortlessly manage and monitor your fleet of devices enrolled in SOTI Mobicontrol EMM."""
+    action_label      = "Download on Play"
+    action_url        = "https://play.google.com/store/apps/details?id=app.cyclops"
+    image             = "/images/projects/cyclops-hero.png"
+    emoji             = "📲"
+    featured          = true
+    tags              = ["Android", "Kotlin", "Compose"]
+
+  [[params.projects]]
+    name              = "Reload"
+    short_description = "Reload makes it easy to monitor config file changes and facilitates hot reloading for your app."
+    long_description  = ""
+    action_label      = "View on GitHub"
+    action_url        = "https://github.com/ancalabrese/reload"
+    image             = "/images/projects/reload-hero.png"
+    emoji             = "⚙️"
+    featured          = true
+    tags              = ["Golang", "Tool"]
+
+  [[params.projects]]
+    name              = "Mobicontrol CLI"
+    short_description = "CLI for Mobicontrol."
+    long_description  = ""
+    action_label      = "View on GitHub"
+    action_url        = "https://github.com/ancalabrese/mc-cli"
+    image             = ""
+    emoji             = "📱"
+    featured          = false
+    tags              = ["Golang", "Tool"]
+
+  [[params.projects]]
+    name              = "Workspace One UEM CLI"
+    short_description = "CLI for Omnissa Workspace One UEM."
+    long_description  = ""
+    action_label      = "View on GitHub"
+    action_url        = "https://github.com/ancalabrese/ws1cli"
+    image             = ""
+    emoji             = "🖥️"
+    featured          = false
+    tags              = ["Golang", "Tool"]
+
+  [[params.projects]]
+    name              = "HoodWatch"
+    short_description = "Neighbourhood Watch is about people monitoring their log files to take action to reduce crime."
+    long_description  = ""
+    action_label      = "View on GitHub"
+    action_url        = "https://github.com/ancalabrese/HoodWatch"
+    image             = ""
+    emoji             = "🕵️"
+    featured          = false
+    tags              = ["Golang", "Tool"]
+
+  [[params.projects]]
+    name              = "AQI"
+    short_description = "Read air quality data from PMSA003 Sensor"
+    long_description  = ""
+    action_label      = "View on GitHub"
+    action_url        = "https://github.com/ancalabrese/AQI"
+    image             = ""
+    emoji             = "🌬️"
+    featured          = false
+    tags              = ["Golang", "Tool"]

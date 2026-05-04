@@ -1,0 +1,31 @@
+{{ $p := .project }}
+{{ $featured := .featured }}
+<article class="project-card{{ if $featured }} project-card--featured{{ end }}">
+  {{ if $p.image }}
+  <div class="project-card__image">
+    <img src="{{ $p.image }}" alt="{{ $p.name }}" loading="lazy">
+    <div class="project-card__image-overlay"></div>
+  </div>
+  {{ else }}
+  <div class="project-card__image project-card__image--placeholder">
+    <div class="project-card__placeholder-gradient"></div>
+    {{ with $p.emoji }}<span class="project-card__emoji">{{ . }}</span>{{ end }}
+  </div>
+  {{ end }}
+  <div class="project-card__body">
+    <h3 class="project-card__title">{{ with $p.emoji }}<span class="project-card__title-emoji">{{ . }}</span> {{ end }}{{ $p.name }}</h3>
+    <p class="project-card__description">{{ $p.short_description }}</p>
+    {{ with $p.tags }}
+    <div class="project-card__chips">
+      {{ range . }}<span class="chip">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    {{ if $p.action_url }}
+    <a href="{{ $p.action_url }}" class="project-card__action" target="_blank" rel="noopener"
+       onclick="gtag('event', 'project_click', { project_name: '{{ $p.name }}', url: '{{ $p.action_url }}' })">
+      {{ $p.action_label | default "View Project" }}
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"/></svg>
+    </a>
+    {{ end }}
+  </div>
+</article>

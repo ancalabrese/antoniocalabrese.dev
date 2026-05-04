@@ -1,0 +1,161 @@
+{{/* Title */}}
+{{ $title := .Site.Title }}
+{{ if .IsHome }}
+  {{ with .Site.Params.seoTitle }}{{ $title = . }}{{ end }}
+{{ else }}
+  {{ $title = printf "%s | %s" .Title .Site.Title }}
+{{ end }}
+
+{{/* Description — page-level overrides site default */}}
+{{ $description := .Site.Params.description }}
+{{ with .Description }}{{ $description = . }}{{ else }}{{ with .Summary }}{{ $description = . | plainify | truncate 160 }}{{ end }}{{ end }}
+
+{{/* Keywords — page-level overrides site default */}}
+{{ $keywords := .Site.Params.keywords }}
+{{ with .Params.keywords }}{{ $keywords = . }}{{ end }}
+
+{{/* Core */}}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+<meta name="robots" content="index, follow">
+{{ with $keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Open Graph */}}
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="en_US">
+{{ with .Site.Params.ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+
+{{/* Twitter Card */}}
+<meta name="twitter:card" content="{{ if .Site.Params.ogImage }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{ with .Site.Params.twitterHandle }}
+<meta name="twitter:site" content="{{ . }}">
+<meta name="twitter:creator" content="{{ . }}">
+{{ end }}
+{{ with .Site.Params.ogImage }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+
+{{/* Structured Data */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ .Site.BaseURL }}#person",
+      "name": "{{ .Site.Params.author }}",
+      "url": "{{ .Site.BaseURL }}",
+      "image": "{{ .Site.Params.ogImage | absURL }}",
+      "jobTitle": "{{ with .Site.Params.jobTitle }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "{{ .Site.Params.workplace }}"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ .Site.Params.location }}"
+      },
+      "knowsAbout": ["Android Development", "Kotlin", "Jetpack Compose", "Go", "Golang", "Software Engineering", "Indie App Development", "Backend Engineering", "Mobile Development"],
+      {{ range .Site.Params.contact }}{{ if eq .name "email" }}"email": "{{ .value }}",{{ end }}{{ end }}
+      "sameAs": [{{ range $i, $s := .Site.Params.social }}{{ if $i }},{{ end }}"{{ $s.url }}"{{ end }}]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Title }}",
+      "description": "{{ $description }}",
+      "author": { "@id": "{{ .Site.BaseURL }}#person" }
+    }
+  ]
+}
+</script>
+{{ else if eq .Section "about" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": "{{ $title }}",
+  "description": "{{ $description }}",
+  "url": "{{ .Permalink }}",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "{{ .Site.BaseURL }}#person",
+    "name": "{{ .Site.Params.author }}",
+    "image": "{{ .Site.Params.ogImage | absURL }}",
+    "jobTitle": "{{ with .Site.Params.jobTitle }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}",
+    "worksFor": { "@type": "Organization", "name": "{{ .Site.Params.workplace }}" },
+    "address": { "@type": "PostalAddress", "addressLocality": "{{ .Site.Params.location }}" },
+    "knowsAbout": ["Android Development", "Kotlin", "Jetpack Compose", "Go", "Golang", "Software Engineering", "Indie App Development", "Backend Engineering", "Mobile Development"],
+    "description": "{{ .Site.Params.aboutMe | truncate 200 }}",
+    "sameAs": [{{ range $i, $s := .Site.Params.social }}{{ if $i }},{{ end }}"{{ $s.url }}"{{ end }}]
+  }
+}
+</script>
+{{ else if eq .Section "portfolio" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Projects by {{ .Site.Params.author }}",
+  "description": "{{ $description }}",
+  "url": "{{ .Permalink }}",
+  "author": { "@id": "{{ .Site.BaseURL }}#person" },
+  "itemListElement": [
+    {{ range $i, $p := .Site.Params.projects }}{{ if $i }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $i 1 }},
+      "name": "{{ $p.name }}",
+      "description": "{{ $p.short_description }}"{{ with $p.action_url }},
+      "url": "{{ . }}"{{ end }}
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ else if eq .Type "posts" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "description": "{{ $description }}",
+  "url": "{{ .Permalink }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "@id": "{{ .Site.BaseURL }}#person",
+    "name": "{{ .Site.Params.author }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "{{ .Site.BaseURL }}#person",
+    "name": "{{ .Site.Params.author }}"
+  }
+}
+</script>
+{{ else }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ $title }}",
+  "url": "{{ .Permalink }}",
+  "description": "{{ $description }}",
+  "author": {
+    "@type": "Person",
+    "@id": "{{ .Site.BaseURL }}#person",
+    "name": "{{ .Site.Params.author }}"
+  }
+}
+</script>
+{{ end }}

@@ -1,0 +1,17 @@
+<nav role="navigation" aria-label="Main navigation">
+    <div class="container">
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="{{ .Site.Title }} - Home">{{ .Site.Params.logo }}</a>
+            <ul class="nav-links" id="nav-menu">
+                {{ range .Site.Params.nav }}
+                <li>
+                    <a href="{{ .url }}"
+                       {{ if .accent }}class="nav-accent"{{ end }}
+                       {{ if .external }}target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
+                </li>
+                {{ end }}
+            </ul>
+            <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </div>
+</nav>
