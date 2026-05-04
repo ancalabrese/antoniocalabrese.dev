@@ -6,8 +6,6 @@ title = "Antonio Calabrese"
   pagerSize = 6
 
 [taxonomies]
-  category = "categories"
-  tag = "tags"
 
 [params]
   author = "Antonio Calabrese"
