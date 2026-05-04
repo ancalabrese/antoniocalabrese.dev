@@ -969,6 +969,11 @@ section {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0.5rem;
+
+    .title-emoji {
+      -webkit-text-fill-color: initial;
+      background: none;
+    }
   }
 
   .blog-subtitle {
