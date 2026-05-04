@@ -18,7 +18,9 @@ title = "Antonio Calabrese"
   googleAnalytics = "G-84ZB543WE7"
 
   profileImage = "/images/og-image.jpg"
-  aboutMe = "I'm a Software Engineer at Google by day and an indie developer by night. I spend my time building Android apps with Kotlin and Jetpack Compose, writing backend services in Go, and occasionally surviving wipeouts in the ocean. I care deeply about craftsmanship — whether that's clean architecture, smooth animations, or a perfectly timed pizza. When I'm not shipping code, I'm probably lifting heavy things or planning the next side project that will definitely ship this time."
+  aboutMe = """By day, I do Android Enterprise stuff at Google. Before bedtime, I’m deep in Kotlin, Jetpack Compose, and Golang. I love TUIs and prefer them to GUIs.
+When I'm not debugging you'll find me planning my next surf trip, at the squat rack or munching on pizza.
+I'm forever building side projects that (this time, I swear) will make it to production."""
 
   # SEO
   seoTitle    = "Antonio Calabrese | Software Engineer & Indie Developer"
