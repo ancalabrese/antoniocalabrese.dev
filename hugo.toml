@@ -92,13 +92,25 @@ I'm forever building side projects that (this time, I swear) will make it to pro
 
   # Projects — set featured = true for the top 4 (displayed as large cards)
   [[params.projects]]
+    name              = "Glimpse: Photo Widgets"
+    short_description = "Aesthetic photo widgets & picture frames. Custom shapes, 3D cutouts & slideshows."
+    long_description  = """Turn your favorite memories into aesthetic home screen widgets. \
+Glimpse gives you full creative control over your Android home screen with custom photo frames, 3D cutout stickers, rotating picture slideshows, and Material You color matching. No accounts, no ads, and completely private on-device.
+"""
+    action_label      = "Download on Play"
+    action_url        = "https://play.google.com/store/apps/details?id=com.glimpse.widget"
+    image             = "/images/projects/glimpse-hero.webp"
+    emoji             = "👻"
+    featured          = true
+    tags              = ["Android", "Kotlin", "Widgets","Customization"]
+  [[params.projects]]
     name              = "Waypoint: GPS Test"
     short_description = "Professional GNSS status, barometric altimeter & Backtrack navigation tool."
     long_description  = """Experience a high-performance, modern alternative to traditional GPS test tools.\
 Waypoint is a technical utility designed for engineers, surveyors, hikers, and power users who require precise GNSS data, high-fidelity altitude analysis, and professional navigation tools."""
     action_label      = "Download on Play"
     action_url        = "https://play.google.com/store/apps/details?id=waypoint.gps.test"
-    image             = "/images/projects/waypoint-hero-img.png"
+    image             = "/images/projects/waypoint-hero.webp"
     emoji             = "🛰️"
     featured          = true
     tags              = ["Android", "Kotlin", "Compose"]
@@ -110,9 +122,9 @@ Waypoint is a technical utility designed for engineers, surveyors, hikers, and p
 Most fitness apps fail because they rely on willpower. LockIn relies on something stronger: the fear of your friends hating you."""
     action_label      = "Download on Play"
     action_url        = "https://play.google.com/store/apps/details?id=lockin.streak.counter.gym"
-    image             = "/images/projects/lockin-hero.png"
+    image             = "/images/projects/lockin-hero.webp"
     emoji             = "🔥"
-    featured          = true
+    featured          = false
     tags              = ["Android", "Kotlin", "Compose"]
 
   [[params.projects]]
@@ -122,7 +134,7 @@ Most fitness apps fail because they rely on willpower. LockIn relies on somethin
 Effortlessly manage and monitor your fleet of devices enrolled in SOTI Mobicontrol EMM."""
     action_label      = "Download on Play"
     action_url        = "https://play.google.com/store/apps/details?id=app.cyclops"
-    image             = "/images/projects/cyclops-hero.png"
+    image             = "/images/projects/cyclops-hero.webp"
     emoji             = "📲"
     featured          = true
     tags              = ["Android", "Kotlin", "Compose"]
@@ -133,7 +145,7 @@ Effortlessly manage and monitor your fleet of devices enrolled in SOTI Mobicontr
     long_description  = ""
     action_label      = "View on GitHub"
     action_url        = "https://github.com/ancalabrese/reload"
-    image             = "/images/projects/reload-hero.png"
+    image             = "/images/projects/reload-hero.webp"
     emoji             = "⚙️"
     featured          = true
     tags              = ["Golang", "Tool"]
