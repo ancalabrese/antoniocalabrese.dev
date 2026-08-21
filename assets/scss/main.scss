@@ -624,7 +624,7 @@ section {
   text-align: center;
   margin-bottom: 0.5rem;
 
-  &__subtitle {
+  &__title {
     font-size: clamp(1.8rem, 3.5vw, 2.5rem);
     font-weight: 700;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));

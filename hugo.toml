@@ -7,6 +7,11 @@ title = "Antonio Calabrese"
 
 [taxonomies]
 
+[outputs]
+  home    = ["HTML", "RSS"]
+  section = ["HTML"]
+  page    = ["HTML"]
+
 [params]
   author = "Antonio Calabrese"
   logo = "AC"
