@@ -673,6 +673,7 @@ section {
 
 // Project card
 .project-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -688,6 +689,12 @@ section {
       0 0 0 1px rgba(0, 212, 255, 0.8),
       0 0 20px rgba(0, 212, 255, 0.5),
       0 0 50px rgba(157, 80, 187, 0.35);
+  }
+
+  // Keyboard parity: focusing the action link rings the whole card
+  &:has(.project-card__action:focus-visible) {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 3px;
   }
 
   &__image {
@@ -777,6 +784,16 @@ section {
     text-decoration: none;
     transition: gap 0.2s ease;
 
+    // Stretch this link over the whole card so a tap anywhere follows it.
+    // Keeps one real <a> in the markup — no nested links, no JS, and
+    // right-click / "open in new tab" / middle-click all still work.
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
     svg {
       flex-shrink: 0;
       color: var(--secondary-color);
@@ -784,6 +801,10 @@ section {
 
     &:hover {
       gap: 0.6rem;
+    }
+
+    &:focus-visible {
+      outline: none;
     }
   }
 
